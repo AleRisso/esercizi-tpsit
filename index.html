@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Esercizio con frecce direzionali</title>
+    <style>
+        .button {
+            background-color: green;
+            width: 150px;
+            height: 150px;
+        }
+        .button1 {
+            background-color: green;
+        }
+        .button2 {
+            background-color: green ; 
+        }
+        .button3 {
+            background-color: green;
+        }
+        .button4 {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let A = 0;
+        let E = 0;
+
+         function myFunctionSinistra() {
+            E--;
+            document.getElementById("orizz").innerHTML = "Orizzontale: " +E;
+        }
+        function myFunctionDestra() {
+            E++;
+            document.getElementById("orizz").innerHTML = "Orizzontale: " +E;
+        } 
+        
+        
+        function myFunctionSotto() {
+
+            A--;
+            document.getElementById("verti").innerHTML = "Verticale: " +A;
+        }
+        function myFunctionSopra() {
+            A++;
+            document.getElementById("verti").innerHTML = "Verticale: " +A;
+        }
+
+
+       
+    </script>
+
+
+    <button class="button">.</button>
+    <button onclick="myFunctionSopra()"class="button">🠕</button>
+    <button  class="button">.</button>
+    <br>
+    <button onclick="myFunctionSinistra()"class="button">🠔</button>
+    <button class="button">.</button>
+
+    <button onclick="myFunctionDestra()"class="button">→</button>
+    <br>
+    <button class="button">.</button>
+
+    <button onclick="myFunctionSotto()"class="button">↓</button>
+
+    <button class="button">.</button>
+
+    <p id="orizz">Orizzontale:</p>
+    <p id="verti">Verticale:</p>
+    <br>
+    
+</body>
+</html>
